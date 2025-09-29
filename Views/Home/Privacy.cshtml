@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Privacy Policy";
+}
+<!-- check who login-->
+
+@if(ViewBag.role == "lecturer")
+
+{
+    <!-- create a link that open index --> 
+    <a href="@Url.Action("Index", "Home")">
+        Home
+    </a>
+}else if (ViewBag.role == "pm")
+{
+    <!-- create a link to privacy page-->
+    <a href="@Url.Action("Privacy", "Home")">
+        Claim
+    </a>
+}
